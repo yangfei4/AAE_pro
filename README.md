@@ -62,5 +62,5 @@ Selected Object:
 ```
 
 ### Reference: 
-This project is lagerly based on
+This project is largely based on
 [DLR-RM/AugmentedAutoencoder](https://github.com/DLR-RM/AugmentedAutoencoder).
