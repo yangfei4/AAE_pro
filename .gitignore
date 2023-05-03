@@ -1,0 +1,10 @@
+install
+*.npy
+*.pyc
+*.vscode
+*.egg-info
+/data
+/AAE_workspace
+venv/
+workspace/
+
