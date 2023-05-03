@@ -2,11 +2,13 @@
 
 # List of object names
 objects=(
-"obj_01.ply"
+"obj_04.ply"
+"obj_14.ply"
+"obj_15.ply"
 )
 
 # Base path
-AE_WORKSPACE_PATH="./autoencoder_ws"
+AE_WORKSPACE_PATH="../autoencoder_ws"
 
 # Loop through object names
 for obj_name in "${objects[@]}"; do
