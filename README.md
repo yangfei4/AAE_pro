@@ -7,8 +7,6 @@ You can create and install required packages with conda.
 conda env create -f aae_py37_tf26.yml
 ```
 
-Reference: [DLR-RM/AugmentedAutoencoder](https://github.com/DLR-RM/AugmentedAutoencoder)
-
 ### Runing Commands
 
 1. Activate conda environment.
@@ -45,7 +43,7 @@ Reference: [DLR-RM/AugmentedAutoencoder](https://github.com/DLR-RM/AugmentedAuto
     ```
     You can adjust the object numbers to be trained and the object path in the `train.sh`.
 
-#### Evaluation
+### Evaluation
 We selected 10 objects from the T-LESS dataset for evaluation. They vary in shape, size and symmetric properties. The objects are numbered as follows:
 
 ```bash
@@ -61,3 +59,8 @@ Selected Object:
 - 18 (trained)
 - 27
 - 29
+```
+
+### Reference: 
+This project is lagerly based on
+[DLR-RM/AugmentedAutoencoder](https://github.com/DLR-RM/AugmentedAutoencoder).
