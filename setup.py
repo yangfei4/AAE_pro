@@ -14,6 +14,8 @@ setup(
                             'ae_embed = auto_pose.ae.ae_embed:main',
                             'ae_eval = auto_pose.eval.ae_eval:main']
     },
-    package_data={'auto_pose': ['ae/cfg/*', 'ae/cfg_eval/*', 'ae/cfg_m3vision/*', 'm3_interface/sample_data/*', 'meshrenderer/shader/*']},
+    package_data={'auto_pose': ['ae/cfg/*', 'ae/cfg_eval/*', 'ae/cfg_m3vision/*', 'm3_interface/sample_data/*', 'meshrenderer/shader/*', 'visualization/*'], 
+                  'sixd_toolkit':['sixd_toolkit/conversion/*','sixd_toolkit/params/*','sixd_toolkit/pysixd/*','sixd_toolkit/tools/*'],
+                  'm3vision':[]},
     # include_package_data=True
 )

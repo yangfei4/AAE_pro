@@ -1,0 +1,13 @@
+python combine.py ./02/0212
+python combine.py ./02/0226
+python combine.py ./02/0375_s
+python combine.py ./02/0385
+python combine.py ./02/0488
+python combine.py ./12/0141
+python combine.py ./12/0156
+python combine.py ./12/0181
+python combine.py ./12/0287
+python combine.py ./18/0019
+python combine.py ./18/0365
+python combine.py ./18/0384
+python combine.py ./18/0418
