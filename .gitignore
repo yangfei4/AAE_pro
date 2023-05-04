@@ -7,4 +7,6 @@ install
 /AAE_workspace
 venv/
 workspace/
-
+/visual
+/detections
+/build

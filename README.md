@@ -47,23 +47,24 @@ conda env create -f aae.yml
 We selected 10 objects from the T-LESS dataset for evaluation. They vary in shape, size and symmetric properties. The objects are numbered as follows:
 
 ```bash
-Selected Object:
+Selected Objects:
 
-- 01 (trained)
-- 02 (trained)
-- 04 (trained)
-- 12 (trained)
-- 14 (trained)
-- 15 (training)
-- 16 (trained)
-- 18 (trained)
-- 27 (trained)
-- 29 (trained)
+- 01 (trained, evalued in folder 000005, idx 0)
+- 02 (trained, evalued in folder 000001, idx 0)
+# - 04 (trained, replaced by 05)
+- 05 (training)
+- 12 (trained, evalued in folder 000003, idx 3)
+- 14 (trained, evalued in folder 000007, idx 3)
+- 15 (trained, evalued in folder 000007, idx 4)
+- 16 (trained, evalued in folder 000007, idx 5)
+- 18 (trained, evalued in folder 000003, idx 4)
+- 27 (trained, evalued in folder 000015, idx 2)
+- 29 (trained, evalued in folder 000015, idx 4)
 ```
 
 #### Create Test Images
 ##### 1. Render Ground Truth from Pose Information
-- `data/t_less/t-less_v2/test_primesense` contains 20 folders having ground truth in different scene. Each scene may have 2-3 objects from T-Less. Take `000001` for example,  `scene_gt.json` contains obj id and its rotation matrix.
+- `data/t_less/t-less_v2/test_primesense` contains 20 folders having ground truth in different scenes. Each scene may have 2-3 objects from T-Less. Take `000001` for example,  `scene_gt.json` contains obj id and its rotation matrix.
    
   To parse the `.json` file, getting a json called `{object_id}_gt.json` only for one object, run: 
 
@@ -82,7 +83,7 @@ Selected Object:
   ```
   e.g.
   ```shell
-  python ./scripts/save_gt.py ./data/t_less/t-less_v2/test_primesense/000001/2_gt.json exp_group_obj_02/my_autoencoder
+  python ./scripts/save_gt.py ./data/t_less/t-less_v2/test_primesense/000001/2_gt.json exp_group_obj_15/my_autoencoder
   ```
 
 ##### 2. Generate Cropped Test Images
@@ -93,7 +94,7 @@ Selected Object:
    ```
    e.g.
    ```shell
-   python ./scripts/extract_crop_bbx.py --obj_id=2 --index=1 ./data/t_less/t-less_v2/test_primesense/000001/scene_gt_info.json
+   python ./scripts/extract_crop_bbx.py --obj_id=2 --index=0 ./data/t_less/t-less_v2/test_primesense/000001/scene_gt_info.json
    ```
 - Generate cropped test images using
   ```shell
@@ -106,10 +107,18 @@ Selected Object:
 After above operations, we'll get our test image folder `{obj_id}_roi` and ground truth image folder `{obj_id}_gt`. The test images will be fed into trained AAE model to get predicted poses.
 
 ##### 3. Render Predicted Pose
-   Using `python aae_image.py exp_group/my_autoencoder -f /path/to/image/file/or/folder`
-   
+   ```shell
+   python auto_pose/test/aae_image.py exp_group_obj_15/my_autoencoder -f /home/zjh/Desktop/AAE_pro/data/t_less/t-less_v2/test_primesense/000001/2_roi   
+   ```
 
 ##### 4. Compare these two images using mAP and mAR metrics.
+Evaluation [code](./evaluate.ipynb)
+- Image mertrics
+  Convert rgb image to binary image
+- Computer mAP & mAR @IoU0.75
+- Computer average Euler angle error for each axis [roll, pitch, yaw]
+
+
 
 ### Reference: 
 This project is largely based on
