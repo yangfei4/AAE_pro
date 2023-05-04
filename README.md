@@ -87,7 +87,7 @@ Selected Objects:
   ```
 
 ##### 2. Generate Cropped Test Images
--  Parse `scene_gt_info.json` to get object's bounding box, it will generate a `{object_id}_roi.json` file containing bbox location, where index_id is the order of target object in the `scene_gt_info.json`.
+-  Parse `scene_gt_info.json` to get the object's bounding box, it will generate a `{object_id}_roi.json` file containing bbox location, where index_id is the order of the target object in the `scene_gt_info.json`.
    
    ```shell
    python ./scripts/extract_crop_bbx.py --obj_id=<obj_id> --index=<index_th> path_to_scene_gt_info.json
@@ -104,7 +104,7 @@ Selected Objects:
   ```shell
   python ./scripts/crop_img.py ./data/t_less/t-less_v2/test_primesense/000001/2_roi.json ./data/t_less/t-less_v2/test_primesense/000001/rgb
   ```
-After above operations, we'll get our test image folder `{obj_id}_roi` and ground truth image folder `{obj_id}_gt`. The test images will be fed into trained AAE model to get predicted poses.
+After the above operations, we'll get our test image folder `{obj_id}_roi` and ground truth image folder `{obj_id}_gt`. The test images will be fed into a trained AAE model to get predicted poses.
 
 ##### 3. Render Predicted Pose
    ```shell
@@ -121,5 +121,4 @@ Evaluation [code](./evaluate.ipynb)
 
 
 ### Reference: 
-This project is largely based on
-[DLR-RM/AugmentedAutoencoder](https://github.com/DLR-RM/AugmentedAutoencoder).
+This project is a re-implementation of [DLR-RM/AugmentedAutoencoder](https://github.com/DLR-RM/AugmentedAutoencoder).
