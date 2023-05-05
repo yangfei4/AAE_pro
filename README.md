@@ -50,16 +50,16 @@ We selected 10 objects from the T-LESS dataset for evaluation. They vary in shap
 ```bash
 Selected Objects:
 
-- 01 (trained, evalued in folder 000005, idx 0)
-- 02 (trained, evalued in folder 000001, idx 0)
-- 05 (trained, evaluating in folder 000002, idx 0)
-- 12 (trained, evalued in folder 000003, idx 3)
-- 14 (trained, evalued in folder 000007, idx 3)
-- 15 (trained, evalued in folder 000007, idx 4)
-- 16 (trained, evalued in folder 000007, idx 5)
-- 18 (trained, evalued in folder 000003, idx 4)
-- 27 (trained, evalued in folder 000015, idx 2)
-- 29 (trained, evalued in folder 000015, idx 4)
+- 01 (trained, contained in folder 000005, idx 0)
+- 02 (trained, contained in folder 000001, idx 0)
+- 05 (trained, contained in folder 000002, idx 0)
+- 12 (trained, contained in folder 000003, idx 3)
+- 14 (trained, contained in folder 000007, idx 3)
+- 15 (trained, contained in folder 000007, idx 4)
+- 16 (trained, contained in folder 000007, idx 5)
+- 18 (trained, contained in folder 000003, idx 4)
+- 27 (trained, contained in folder 000015, idx 2)
+- 29 (trained, contained in folder 000015, idx 4)
 ```
 
 #### Create Test Images
