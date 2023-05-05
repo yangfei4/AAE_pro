@@ -3,7 +3,7 @@
 ![results](./visual/aae_res/combined_image_vertical.png)
 
 ### Enviroment Installation
-You can create and install required packages with conda.
+You may create and install required packages with conda.
 
 ```bash
 conda env create -f aae.yml
@@ -31,15 +31,14 @@ conda env create -f aae.yml
    ```
 
 #### Training
-1. There's a training script in the `scripts` directory. Before you run it directly, you need to down the training data:
+1. There's a training script in the `scripts` directory. Before you run it, you need to download the training data using following script:
    ```bash
    ./scripts/download_data.sh
    ```
 
 2. Then replace `BACKGROUND_IMAGES_GLOB` in `$AE_WORKSPACE_PATH/cfg/train_template.cfg` with the downloaded VOC dataset path.
 
-3. Finally, you can run the training script:
-
+3. Start training using:
     ```bash
     ./scripts/train.sh
     ```
@@ -53,7 +52,6 @@ Selected Objects:
 
 - 01 (trained, evalued in folder 000005, idx 0)
 - 02 (trained, evalued in folder 000001, idx 0)
-# - 04 (trained, replaced by 05)
 - 05 (trained, evaluating in folder 000002, idx 0)
 - 12 (trained, evalued in folder 000003, idx 3)
 - 14 (trained, evalued in folder 000007, idx 3)
@@ -114,12 +112,11 @@ After the above operations, we'll get our test image folder `{obj_id}_roi` and g
    ```
 
 ##### 4. Compare these two images using mAP and mAR metrics.
-Evaluation [code](./evaluate.ipynb)
+Evaluation pipeline: See [notebook](./evaluate.ipynb)
 - Image mertrics
   Convert rgb image to binary image
 - Computer mAP & mAR @IoU0.75
 - Computer average Euler angle error for each axis [roll, pitch, yaw]
-
 
 
 ### Reference: 
