@@ -1,5 +1,7 @@
 ## Augmented Autoencoders  
 
+![results](./visual/aae_res/combined_image_vertical.png)
+
 ### Enviroment Installation
 You can create and install required packages with conda.
 
