@@ -52,7 +52,7 @@ Selected Objects:
 - 01 (trained, evalued in folder 000005, idx 0)
 - 02 (trained, evalued in folder 000001, idx 0)
 # - 04 (trained, replaced by 05)
-- 05 (training)
+- 05 (trained, evaluating in folder 000002, idx 0)
 - 12 (trained, evalued in folder 000003, idx 3)
 - 14 (trained, evalued in folder 000007, idx 3)
 - 15 (trained, evalued in folder 000007, idx 4)
